@@ -27,6 +27,13 @@ namespace SonPN.Utilities.Download
             {
                 _logger.Trace($"Invoked with argument {excelFile}, {uriIndex}, {nameIndex}, {maxThread}");
                 _localFolder = localFolder;
+
+                if ((int)maxThread == 0)
+                {
+                    _logger.Error("Maxthread is 0. Set to 1");
+                    maxThread = 1;
+                }
+
                 int toProcess = (int) maxThread;
 
 
