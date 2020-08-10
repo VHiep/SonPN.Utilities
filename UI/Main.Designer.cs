@@ -37,16 +37,9 @@
             this.lbl_localFolder = new System.Windows.Forms.Label();
             this.richTextBoxLocalFolder = new System.Windows.Forms.RichTextBox();
             this.btn_browseLocalFolder = new System.Windows.Forms.Button();
-            this.numericUpDownUrlIndex = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDownImageNameIndex = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDownMaxThread = new System.Windows.Forms.NumericUpDown();
-            this.lbl_uriIndex = new System.Windows.Forms.Label();
-            this.lbl_imageNameIndex = new System.Windows.Forms.Label();
-            this.lbl_maxThread = new System.Windows.Forms.Label();
             this.folderBrowserDialogLocalFolder = new System.Windows.Forms.FolderBrowserDialog();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownUrlIndex)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownImageNameIndex)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMaxThread)).BeginInit();
+            this.label_attention = new System.Windows.Forms.Label();
+            this.label_attention2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn_browseExcelFile
@@ -55,7 +48,7 @@
             this.btn_browseExcelFile.Name = "btn_browseExcelFile";
             this.btn_browseExcelFile.Size = new System.Drawing.Size(75, 23);
             this.btn_browseExcelFile.TabIndex = 0;
-            this.btn_browseExcelFile.Text = "Browse File";
+            this.btn_browseExcelFile.Text = "Tìm kiếm file";
             this.btn_browseExcelFile.UseVisualStyleBackColor = true;
             this.btn_browseExcelFile.Click += new System.EventHandler(this.btn_browseExcelFile_Click);
             // 
@@ -85,7 +78,7 @@
             this.label_excelPath.Name = "label_excelPath";
             this.label_excelPath.Size = new System.Drawing.Size(52, 13);
             this.label_excelPath.TabIndex = 2;
-            this.label_excelPath.Text = "Excel File";
+            this.label_excelPath.Text = "File excel";
             // 
             // btn_process
             // 
@@ -93,7 +86,7 @@
             this.btn_process.Name = "btn_process";
             this.btn_process.Size = new System.Drawing.Size(172, 70);
             this.btn_process.TabIndex = 3;
-            this.btn_process.Text = "Process";
+            this.btn_process.Text = "Tải ảnh";
             this.btn_process.UseVisualStyleBackColor = true;
             this.btn_process.Click += new System.EventHandler(this.btn_process_Click);
             // 
@@ -104,7 +97,7 @@
             this.lbl_localFolder.Name = "lbl_localFolder";
             this.lbl_localFolder.Size = new System.Drawing.Size(65, 13);
             this.lbl_localFolder.TabIndex = 4;
-            this.lbl_localFolder.Text = "Local Folder";
+            this.lbl_localFolder.Text = "Thư mục lưu trữ";
             // 
             // richTextBoxLocalFolder
             // 
@@ -120,69 +113,39 @@
             this.btn_browseLocalFolder.Name = "btn_browseLocalFolder";
             this.btn_browseLocalFolder.Size = new System.Drawing.Size(75, 23);
             this.btn_browseLocalFolder.TabIndex = 6;
-            this.btn_browseLocalFolder.Text = "Browse Folder";
+            this.btn_browseLocalFolder.Text = "Tìm kiếm folder";
             this.btn_browseLocalFolder.UseVisualStyleBackColor = true;
             this.btn_browseLocalFolder.Click += new System.EventHandler(this.btn_browseLocalFolder_Click);
             // 
-            // numericUpDownUrlIndex
+            // label_attention
             // 
-            this.numericUpDownUrlIndex.Location = new System.Drawing.Point(169, 125);
-            this.numericUpDownUrlIndex.Name = "numericUpDownUrlIndex";
-            this.numericUpDownUrlIndex.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDownUrlIndex.TabIndex = 7;
+            this.label_attention.AutoSize = true;
+            this.label_attention.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_attention.ForeColor = System.Drawing.Color.Crimson;
+            this.label_attention.Location = new System.Drawing.Point(234, 127);
+            this.label_attention.Name = "label_attention";
+            this.label_attention.Size = new System.Drawing.Size(401, 25);
+            this.label_attention.TabIndex = 7;
+            this.label_attention.Text = "Đường dẫn đến ảnh ở cột 1 trong file EXCEL.";
             // 
-            // numericUpDownImageNameIndex
+            // label_attention2
             // 
-            this.numericUpDownImageNameIndex.Location = new System.Drawing.Point(169, 152);
-            this.numericUpDownImageNameIndex.Name = "numericUpDownImageNameIndex";
-            this.numericUpDownImageNameIndex.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDownImageNameIndex.TabIndex = 8;
-            // 
-            // numericUpDownMaxThread
-            // 
-            this.numericUpDownMaxThread.Location = new System.Drawing.Point(169, 179);
-            this.numericUpDownMaxThread.Name = "numericUpDownMaxThread";
-            this.numericUpDownMaxThread.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDownMaxThread.TabIndex = 9;
-            // 
-            // lbl_uriIndex
-            // 
-            this.lbl_uriIndex.AutoSize = true;
-            this.lbl_uriIndex.Location = new System.Drawing.Point(65, 132);
-            this.lbl_uriIndex.Name = "lbl_uriIndex";
-            this.lbl_uriIndex.Size = new System.Drawing.Size(49, 13);
-            this.lbl_uriIndex.TabIndex = 10;
-            this.lbl_uriIndex.Text = "Uri Index";
-            // 
-            // lbl_imageNameIndex
-            // 
-            this.lbl_imageNameIndex.AutoSize = true;
-            this.lbl_imageNameIndex.Location = new System.Drawing.Point(65, 159);
-            this.lbl_imageNameIndex.Name = "lbl_imageNameIndex";
-            this.lbl_imageNameIndex.Size = new System.Drawing.Size(64, 13);
-            this.lbl_imageNameIndex.TabIndex = 11;
-            this.lbl_imageNameIndex.Text = "Name Index";
-            // 
-            // lbl_maxThread
-            // 
-            this.lbl_maxThread.AutoSize = true;
-            this.lbl_maxThread.Location = new System.Drawing.Point(65, 186);
-            this.lbl_maxThread.Name = "lbl_maxThread";
-            this.lbl_maxThread.Size = new System.Drawing.Size(64, 13);
-            this.lbl_maxThread.TabIndex = 12;
-            this.lbl_maxThread.Text = "Max Thread";
+            this.label_attention2.AutoSize = true;
+            this.label_attention2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_attention2.ForeColor = System.Drawing.Color.Crimson;
+            this.label_attention2.Location = new System.Drawing.Point(234, 175);
+            this.label_attention2.Name = "label_attention2";
+            this.label_attention2.Size = new System.Drawing.Size(384, 25);
+            this.label_attention2.TabIndex = 8;
+            this.label_attention2.Text = "Tên ảnh để lưu lại ở cột 2 trong file EXCEL.";
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(856, 411);
-            this.Controls.Add(this.lbl_maxThread);
-            this.Controls.Add(this.lbl_imageNameIndex);
-            this.Controls.Add(this.lbl_uriIndex);
-            this.Controls.Add(this.numericUpDownMaxThread);
-            this.Controls.Add(this.numericUpDownImageNameIndex);
-            this.Controls.Add(this.numericUpDownUrlIndex);
+            this.Controls.Add(this.label_attention2);
+            this.Controls.Add(this.label_attention);
             this.Controls.Add(this.btn_browseLocalFolder);
             this.Controls.Add(this.richTextBoxLocalFolder);
             this.Controls.Add(this.lbl_localFolder);
@@ -192,9 +155,6 @@
             this.Controls.Add(this.btn_browseExcelFile);
             this.Name = "Main";
             this.Text = "Downloader";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownUrlIndex)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownImageNameIndex)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMaxThread)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -211,13 +171,9 @@
         private System.Windows.Forms.Label lbl_localFolder;
         private System.Windows.Forms.RichTextBox richTextBoxLocalFolder;
         private System.Windows.Forms.Button btn_browseLocalFolder;
-        private System.Windows.Forms.NumericUpDown numericUpDownUrlIndex;
-        private System.Windows.Forms.NumericUpDown numericUpDownImageNameIndex;
-        private System.Windows.Forms.NumericUpDown numericUpDownMaxThread;
-        private System.Windows.Forms.Label lbl_uriIndex;
-        private System.Windows.Forms.Label lbl_imageNameIndex;
-        private System.Windows.Forms.Label lbl_maxThread;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialogLocalFolder;
+        private System.Windows.Forms.Label label_attention;
+        private System.Windows.Forms.Label label_attention2;
     }
 }
 

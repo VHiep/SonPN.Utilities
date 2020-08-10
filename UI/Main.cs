@@ -33,22 +33,19 @@ namespace UI
             {
                 string excelFile = richTextBoxExcelFile.Text;
                 string localFolder = richTextBoxLocalFolder.Text;
-                int uriIndex = (int) numericUpDownUrlIndex.Value;
-                int imageNameIndex = (int) numericUpDownImageNameIndex.Value;
-                double maxThread = (double)numericUpDownMaxThread.Value;
-                
+
                 ThreadPool.QueueUserWorkItem(
                     item =>
                     {
-                        downloadMan.Execute(excelFile, localFolder, uriIndex, imageNameIndex, maxThread);
+                        downloadMan.Execute(excelFile, localFolder, 1, 2, 8);
                         resetEvent.Set();
                     });
 
-                btn_process.Text = "Please wait.";
+                btn_process.Text = "Vui lòng chờ.";
                 btn_process.Enabled = false;
 
                 resetEvent.WaitOne();
-                btn_process.Text = "Process";
+                btn_process.Text = "Tải ảnh";
                 btn_process.Enabled = true;
             }
 
